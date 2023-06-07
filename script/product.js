@@ -30,18 +30,18 @@ const display = (data) => {
       let cartitem = JSON.parse(localStorage.getItem("cartitem")) || [];
 
       let existing = false;
-      cartitem.map((item) => {
+      cartitem.map((item, idx) => {
         if (item.id == ele.id) {
           existing = true;
+
+          cartitem[idx].qty += 1;
         }
       });
 
-      if (existing) {
-        alert("already added to cart");
-      } else {
+      if (!existing) {
         cartitem.push({ ...ele, qty: 1 });
-        alert("not found");
-      }
+        alert("product has been added")
+      } 
 
       localStorage.setItem("cartitem", JSON.stringify(cartitem));
     });
@@ -53,3 +53,7 @@ const display = (data) => {
     document.querySelector(".box2").append(div);
   });
 };
+
+
+
+

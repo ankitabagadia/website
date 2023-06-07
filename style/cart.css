@@ -1,0 +1,27 @@
+#cart div img {
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: cover;
+
+}
+.cart_box{
+    align-items: center;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+.btns_box{
+    margin: 5px;
+    padding: 2px;
+} 
+#parent{
+display: flex;
+
+
+}
+#price {
+    width: 500px;
+    height: 100vh;
+    border: 1px solid black;
+}
